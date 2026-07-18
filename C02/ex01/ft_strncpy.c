@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xostka <xostka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/10 03:03:49 by xostka            #+#    #+#             */
-/*   Updated: 2026/07/13 14:44:42 by xostka           ###   ########.fr       */
+/*   Created: 2026/07/16 12:44:41 by xostka            #+#    #+#             */
+/*   Updated: 2026/07/16 19:51:05 by xostka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	*div = a / b;
-	*mod = a % b;
+	unsigned int	i;
+
+	i = 0;
+	while (i < n && src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }
+
+// #include <stdio.h>
 
 // int	main(void)
 // {
-// 	int	a;
-// 	int	b;
+// 	char	dest[50];
+// 	char	src[50] = "duck";
 
-// 	ft_div_mod(6, 2, &a, &b);
+// 	ft_strncpy(dest, src, 4);
+// 	printf("%s", dest);
 // }

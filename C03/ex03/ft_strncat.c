@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xostka <xostka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/10 03:03:49 by xostka            #+#    #+#             */
-/*   Updated: 2026/07/13 14:44:42 by xostka           ###   ########.fr       */
+/*   Created: 2026/07/17 02:39:55 by xostka            #+#    #+#             */
+/*   Updated: 2026/07/17 02:44:13 by xostka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	*div = a / b;
-	*mod = a % b;
+	unsigned int	dest_len;
+	unsigned int	i;
+
+	dest_len = 0;
+	while (dest[dest_len] != '\0')
+	{
+		dest_len++;
+	}
+
+	i = 0;
+	while (src[i] != '\0' && i < nb)
+	{
+		dest[dest_len + i] = src[i];
+		i++;
+	}
+
+	dest[dest_len + i] = '\0';
+
+	return (dest);
 }
-
-// int	main(void)
-// {
-// 	int	a;
-// 	int	b;
-
-// 	ft_div_mod(6, 2, &a, &b);
-// }

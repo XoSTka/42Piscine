@@ -1,25 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xostka <xostka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/10 03:03:49 by xostka            #+#    #+#             */
-/*   Updated: 2026/07/13 14:44:42 by xostka           ###   ########.fr       */
+/*   Created: 2026/07/16 19:10:59 by xostka            #+#    #+#             */
+/*   Updated: 2026/07/16 20:00:11 by xostka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+char	*ft_strupcase(char *s)
 {
-	*div = a / b;
-	*mod = a % b;
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] -= 32;
+		}
+		i++;
+	}
+	return (s);
 }
+
+// #include <stdio.h>
 
 // int	main(void)
 // {
-// 	int	a;
-// 	int	b;
+// 	char	word[] = "bruh";
+// 	char	num[] = "ass";
 
-// 	ft_div_mod(6, 2, &a, &b);
+// 	printf("%s\n", ft_strupcase(word));
+// 	printf("%s", ft_strupcase(num));
+
 // }

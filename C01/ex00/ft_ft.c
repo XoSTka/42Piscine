@@ -6,12 +6,25 @@
 /*   By: xostka <xostka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/09 23:06:20 by xostka            #+#    #+#             */
-/*   Updated: 2026/07/10 03:10:44 by xostka           ###   ########.fr       */
+/*   Updated: 2026/07/13 14:52:34 by xostka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_ft(int *nbr)
 {
 	*nbr = 42;
 }
+
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// 	int	i;
+
+// 	i = 0;
+// 	ft_ft(&i);
+// 	printf("%d", i);
+// }
 

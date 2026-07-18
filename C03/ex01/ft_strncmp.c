@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xostka <xostka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/10 03:03:49 by xostka            #+#    #+#             */
-/*   Updated: 2026/07/13 14:44:42 by xostka           ###   ########.fr       */
+/*   Created: 2026/07/17 02:30:35 by xostka            #+#    #+#             */
+/*   Updated: 2026/07/17 02:35:15 by xostka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	*div = a / b;
-	*mod = a % b;
+	unsigned int	i;
+
+	if (n == 0)
+	{
+		return (0);
+	}
+	i = 0;
+	while (s1[i] != '\0' && s1[i] == s2[i] && i < (n - 1))
+	{
+		i++;
+	}
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-
-// int	main(void)
-// {
-// 	int	a;
-// 	int	b;
-
-// 	ft_div_mod(6, 2, &a, &b);
-// }

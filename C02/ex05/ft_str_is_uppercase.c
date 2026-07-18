@@ -1,25 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xostka <xostka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/10 03:03:49 by xostka            #+#    #+#             */
-/*   Updated: 2026/07/13 14:44:42 by xostka           ###   ########.fr       */
+/*   Created: 2026/07/16 19:02:46 by xostka            #+#    #+#             */
+/*   Updated: 2026/07/16 19:49:53 by xostka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int	ft_str_is_uppercase(char *str)
 {
-	*div = a / b;
-	*mod = a % b;
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] < 'A' || str[i] > 'Z')
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }
+
+// #include <stdio.h>
 
 // int	main(void)
 // {
-// 	int	a;
-// 	int	b;
+// 	char	word[] = "FORK";
+// 	char	num[] = "ass";
 
-// 	ft_div_mod(6, 2, &a, &b);
+// 	printf("%d", ft_str_is_uppercase(word));
+// 	printf("%d", ft_str_is_uppercase(num));
+
 // }

@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xostka <xostka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/10 03:03:49 by xostka            #+#    #+#             */
-/*   Updated: 2026/07/13 14:44:42 by xostka           ###   ########.fr       */
+/*   Created: 2026/07/17 02:55:07 by xostka            #+#    #+#             */
+/*   Updated: 2026/07/17 03:02:17 by xostka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+#include <unistd.h>
+
+void    ft_putchar(char c)
 {
-	*div = a / b;
-	*mod = a % b;
+    write(1, &c, 1);
 }
+void    ft_putnbr(int nb)
+{
+    long    n;
 
-// int	main(void)
-// {
-// 	int	a;
-// 	int	b;
+    n = nb;
+    if (n < 0)
+    {
+        ft_putchar('-');
+        n = -n;
+    }
 
-// 	ft_div_mod(6, 2, &a, &b);
-// }
+    if (n >= 10)
+    {
+        ft_putnbr(n / 10);
+        ft_putnbr(n % 10);
+    }
+
+    else
+    {
+        ft_putchar(n + '0');
+    }
+}

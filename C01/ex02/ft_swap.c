@@ -6,7 +6,7 @@
 /*   By: xostka <xostka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/10 02:54:28 by xostka            #+#    #+#             */
-/*   Updated: 2026/07/10 03:02:19 by xostka           ###   ########.fr       */
+/*   Updated: 2026/07/13 14:44:06 by xostka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ void	ft_swap(int *a, int *b)
 	*a = temp;
 }
 
-int	main(void)
-{
-	int	n;
-	int	m;
+// int	main(void)
+// {
+// 	int	n;
+// 	int	m;
 
-	n = 1;
-	m = 2;
+// 	n = 1;
+// 	m = 2;
 
-	ft_swap(&n, &m);
-}
+// 	ft_swap(&n, &m);
+// }

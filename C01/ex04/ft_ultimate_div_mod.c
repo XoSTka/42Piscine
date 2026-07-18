@@ -6,7 +6,7 @@
 /*   By: xostka <xostka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/10 03:11:13 by xostka            #+#    #+#             */
-/*   Updated: 2026/07/10 03:15:52 by xostka           ###   ########.fr       */
+/*   Updated: 2026/07/13 14:44:51 by xostka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,9 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	rmd_rslt = *a % *b;
 	*a = div_rslt;
 	*b = rmd_rslt;
+}
+
+int main(void)
+{
+	
 }

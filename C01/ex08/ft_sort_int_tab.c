@@ -6,7 +6,7 @@
 /*   By: xostka <xostka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/10 04:01:53 by xostka            #+#    #+#             */
-/*   Updated: 2026/07/10 04:31:58 by xostka           ###   ########.fr       */
+/*   Updated: 2026/07/13 14:48:41 by xostka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,12 @@ void	ft_sort_int_tab(int *tab, int size)
 
 #include <stdio.h>
 
-// วางฟังก์ชัน ft_sort_int_tab ของคุณไว้ที่นี่
-
 int main(void)
 {
     int tab[] = {64, 34, 25, 12, 22, 11, 90};
     int size = 7;
     int i = 0;
 
-    // 1. พิมพ์ค่าก่อนเรียง
     printf("Before sort: ");
     while (i < size)
     {
@@ -56,10 +53,8 @@ int main(void)
     }
     printf("\n");
 
-    // 2. เรียกใช้ฟังก์ชันของคุณ
     ft_sort_int_tab(tab, size);
 
-    // 3. พิมพ์ค่าหลังเรียง (ถ้าทำถูก ผลลัพธ์ต้องเรียงจากน้อยไปมาก)
     i = 0;
     printf("After sort:  ");
     while (i < size)

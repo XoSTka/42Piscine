@@ -1,46 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xostka <xostka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/10 01:10:26 by xostka            #+#    #+#             */
-/*   Updated: 2026/07/13 15:06:09 by xostka           ###   ########.fr       */
+/*   Created: 2026/07/16 23:36:44 by xostka            #+#    #+#             */
+/*   Updated: 2026/07/17 02:14:21 by xostka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_ft(int *********nbr)
+
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	*********nbr = 42;
+	unsigned int	src_len;
+	unsigned int	i;
+
+	src_len = 0;
+	while (src[src_len] != '\0')
+	{
+		src_len++;
+	}
+
+	if (size > 0)
+	{
+		i = 0;
+		while (src[i] != '\0' && i < (size - 1))
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
+	}
+
+	return (src_len);
 }
 
 // #include <stdio.h>
 
 // int	main(void)
 // {
-// 	int num;
-// 	int *p1;
-// 	int **p2;
-// 	int ***p3;
-// 	int ****p4;
-// 	int *****p5;
-// 	int ******p6;
-// 	int *******p7;
-// 	int ********p8;
-// 	int *********p9;
+// 	char	dest[50];
+// 	char	src[50] = "duck";
 
-// 	num = 0;
-// 	p1 = &num;
-// 	p2 = &p1;
-// 	p3 = &p2;
-// 	p4 = &p3;
-// 	p5 = &p4;
-// 	p6 = &p5;
-// 	p7 = &p6;
-// 	p8 = &p7;
-// 	p9 = &p8;
-// 	ft_ultimate_ft(p9);
-// 	printf("%d", num);
-
+// 	printf("%d", ft_strlcpy(dest, src, 4));
+// 	printf("%s", dest);
 // }

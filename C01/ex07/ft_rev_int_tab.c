@@ -6,7 +6,7 @@
 /*   By: xostka <xostka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/10 03:30:01 by xostka            #+#    #+#             */
-/*   Updated: 2026/07/10 03:58:34 by xostka           ###   ########.fr       */
+/*   Updated: 2026/07/13 14:48:12 by xostka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ void ft_rev_int_tab(int *tab, int size)
 }
 
 #include <stdio.h>
-
-// วางฟังก์ชัน ft_rev_int_tab ของคุณไว้ตรงนี้
 
 int main(void)
 {
